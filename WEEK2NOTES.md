@@ -72,3 +72,76 @@ Assembly Language - hard to learn but highly specific to computer language. Less
 ## STEP 4: Linking (.o -> .out)
 Linking is a process of including the library files into our program. 
 
+
+# Arrays
+## Data Types
+**bool:** 1 byte (T / F)
+**int:** 4 bytes (-2000000000 - 2000000000)
+**long:** 8 bytes (E or	1,000,000,000,000,000,000 or 1 quintillion)
+**float:** 4 bytes (4 billion)
+**double:** 8 bytes (more precise than float)
+**char:** 1 byte
+**string:** ? bytes
+...
+
+## Declaring an Array
+```
+int scores[n];
+```
+
+where n = length.
+
+**Instead of declaring a separate variable for each value**
+```
+int main(void)
+{
+  int socre1 = get_int("Score: );
+  int socre2 = get_int("Score: );
+  int socre3 = get_int("Score: );
+
+  printf("Average: %f\n", (score1 + score2 + score3)) / (float) 3;
+}
+```
+**We could do this and declare one variable and index the values part of that variable**
+```
+int main(void)
+{
+int scores[3];
+scores[0] = get_int("Score: );
+scores[1] = get_int("Score: );
+scores[2] = get_int("Score: );
+printf("Average: %f\n", (scores[0] + scores[1] + scores[3])) / (float);
+}
+```
+
+**we can design this array creation better using a loop**
+```
+int main(void)
+{
+int scores[3];
+for (int i = 0; i < 3; i++) {
+  scores[i] = get_int("Score: );
+}
+printf("Average: %f\n", (scores[0] + scores[1] + scores[3])) / (float);
+}
+```
+
+
+# Strings
+variable length
+Just an array of characters represented in ""
+
+**HOW DO YOU KNOW where they end?!**
+1 extra byte is added to the end of every string to represent the end
+```
+\0
+```
+**Nul:** special null charaacter. zero above represented as a character meaning zero and the end of the string. How printf() knows when to stop printing.
+
+# Command Line Arguments
+
+
+# Exit Status
+When your main function exits, a secret integer is created and will create some kind of error message.
+
+# Cryptography
