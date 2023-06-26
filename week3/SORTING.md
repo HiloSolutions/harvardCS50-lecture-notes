@@ -22,6 +22,8 @@ Repeat n times
 
 
 # Merge Sort
+Highly efficient but uses more space
+
 Pseudocode
 ```
 Sort left half
